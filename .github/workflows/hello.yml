@@ -9,3 +9,8 @@ jobs:
     steps:
       - name: print hello
         run: echo "hello world"
+  say_another_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print another hello job 2
+        run: echo "hello world from another job"
