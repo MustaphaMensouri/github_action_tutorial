@@ -2,15 +2,13 @@ name: print_hello
 on: 
   push:
     branches: [main]
-
+env:
+  HELLO: "hello to varaible"
 jobs:
   say_hello:
     runs-on: ubuntu-latest
     steps:
       - name: print hello
         run: echo "hello world"
-  say_another_job:
-    runs-on: ubuntu-latest
-    steps:
-      - name: print another hello job 2
-        run: echo "hello world from another job"
+      - name: print varaible
+        run: echo "this is a ${{ env.HELLO}}"
