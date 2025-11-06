@@ -12,3 +12,5 @@ jobs:
         run: echo "hello world"
       - name: print varaible
         run: echo "this is a ${{ env.HELLO}}"
+      - name: print secret  
+        run: echo "this is a secret ${{ secrets.EXAMPLE_OF_SECRET }}"
